@@ -81,7 +81,7 @@ try:
         c=b.strftime('%I:%M:%S %p')
         Halt_days='Sun (Mon) (Tue) (Wed) (Thur) (Fri) Sat'
 
-        if Catogory =='AGRICULTURAL':
+        if Category =='AGRICULTURAL':
             Time_zone=TradingHours_list[8]
 
             End_time=TradingHours_list[16]+' '+TradingHours_list[17]
@@ -98,7 +98,7 @@ try:
             Halt_end_Time_6=Halt_end_time_5.strftime('%I:%M:%S %p')
             Halt_end_Time=Halt_end_Time_6+'  '+('('+Halt_end_Time_3+'|'+Halt_end_Time_6+')'+'  ')*4+'('+Halt_end_Time_3+'|'+c+')'+'  '+c
 
-        if Catogory =='ENERGY':
+        if Category =='ENERGY':
             if TradingHours_list[27] == 'CT)':
                 Time_zone='ET'
 
@@ -111,7 +111,7 @@ try:
                 Halt_end_Time_3=Halt_end_time_2.strftime('%I:%M:%S %p')
                 Halt_end_Time=Halt_end_Time_3+'  '+('('+Halt_end_Time_3+')'+'  ')*4+'('+c+')'+'  '+c
 
-        if Catogory =='EQUITY-INDEX':
+        if Category =='EQUITY-INDEX':
             if TradingHours_list[10]=='(ET)':
                 Time_zone='ET'
 
@@ -126,7 +126,7 @@ try:
 
                 Halt_end_Time=Halt_end_Time_3+'  '+('('+ e +'|'+Halt_end_Time_3+')'+'  ')*4+'('+ e + "|" + c +')'+'  '+c
 
-        if Catogory =='FX':
+        if Category =='FX':
             if TradingHours_list[8]=='CT':
                 Time_zone=TradingHours_list[8]
             else:
@@ -141,7 +141,7 @@ try:
             Halt_end_Time_3=Halt_end_time_2.strftime('%I:%M:%S %p')
             Halt_end_Time=Halt_end_Time_3+'  '+('('+Halt_end_Time_3+')'+'  ')*4+'('+c+')'+'  '+c
 
-        if Catogory =='INTEREST-RATES':
+        if Category =='INTEREST-RATES':
             if TradingHours_list[3] =='5:00':
                 Time_zone='CT'
             else:
@@ -156,7 +156,7 @@ try:
             Halt_end_Time_3=Halt_end_time_2.strftime('%I:%M:%S %p')
             Halt_end_Time=Halt_end_Time_3+'  '+('('+Halt_end_Time_3+')'+'  ')*4+'('+c+')'+'  '+c
 
-        if Catogory =='METALS':
+        if Category =='METALS':
             if TradingHours_list[3]=='6:00':
                 Time_zone='ET'
             End_time=TradingHours_list[6]+' '+TradingHours_list[7]
